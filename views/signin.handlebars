@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/0833571da7.js"></script>
+    <link rel="stylesheet" href="css/auth.css" />
+    <title>Sign In</title>
+  </head>
+  <body>
+    <div id="grid-container">
+      <div id="left">
+        <div class="header">
+          <h1 class="logo">GameList</h1>
+        </div>
+         <!-- If registration successful, display success flash message -->
+        {{#if success_msg}}
+        <div class="success">
+                <p>{{success_msg}}</p>
+            </div>
+        {{/if}}
+        {{#if error_msg}}
+        <div class="error">
+                <p>{{error_msg}}</p>
+            </div>
+        {{/if}}
+        {{#if error}}
+        <div class="error">
+                <p>{{error}}</p>
+            </div>
+        {{/if}}
+        <div class="signin-form">
+          <form action="/signin" method="POST" autocomplete="off">
+            <div>
+              <label for="email">Email</label>
+              <input type="text" name="email" id="email" class="text-input" value={{email}}>
+            </div>
+            <div>
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" class="text-input" value={{password}}>
+            </div>
+            <button type="submit" class="btn btn-left">Sign In</button>
+          </form>
+        </div>
+        {{!-- <div class="google-signin-container">
+          <button class="btn btn-left google-signin">
+            <i class="fab fa-google"> </i> Google Sign In
+          </button>
+        </div> --}}
+        <div class="show-on-small">
+          <p>Don't have an account?</p>
+          <p>Register instead</p>
+          <div class="signin">
+            <a class="btn btn-signin" href="/register">Register</a>
+          </div>
+        </div>
+      </div>
+      <div id="right" class="hide-on-small">
+        <div class="right-content">
+          <p>Don't have an account?</p>
+          <p>Register instead</p>
+          <div class="signin">
+            <a class="btn btn-signin" href="/register">Register</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

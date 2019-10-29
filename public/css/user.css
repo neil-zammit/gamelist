@@ -1,0 +1,224 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #efe9cc;
+  text-align: center;
+  background: #181818;
+}
+
+a {
+  text-decoration: none;
+  color: #efe9cc;
+}
+
+/* Add Remove Buttons */
+#add-remove {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-lg {
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  border: 1px solid #f4f4f4;
+  transition: 0.5s;
+  margin: 2rem;
+}
+
+.btn-lg:hover {
+  color: #f96816;
+  border: 1px solid #f96816;
+}
+
+/* Game Console Icons */
+.icon {
+  font-size: 3rem;
+  opacity: 0.8;
+}
+
+.icon:hover {
+  opacity: 1;
+}
+
+.playstation {
+  color: #003087;
+}
+
+.xbox {
+  color: #107c10;
+}
+
+.pc {
+  color: #eb1d24;
+}
+
+/* Games Grid */
+#games-grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.games-grid-col {
+  margin-bottom: 2rem;
+}
+
+.game-cover {
+  height: 350px;
+  width: 284px;
+  border-radius: 2px;
+  filter: grayscale(35%);
+  transition: 0.5s;
+}
+
+.game-cover:hover {
+  filter: grayscale(0);
+}
+
+.icon {
+  padding: 1rem;
+}
+
+/* Media Query  */
+@media (max-width: 1200px) {
+  /* Games Grid */
+  #games-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .games-grid-col {
+    margin-bottom: 2rem;
+  }
+
+  .game-cover {
+    height: 350px;
+    width: 284px;
+    border-radius: 2px;
+    filter: grayscale(35%);
+    transition: 0.5s;
+  }
+
+  .game-cover:hover {
+    filter: grayscale(0);
+  }
+
+  .icon {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 959px) {
+  /* Games Grid */
+  #games-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .games-grid-col {
+    margin-bottom: 2rem;
+  }
+
+  .game-cover {
+    height: 350px;
+    width: 284px;
+    border-radius: 2px;
+    filter: grayscale(35%);
+    transition: 0.5s;
+  }
+
+  .game-cover:hover {
+    filter: grayscale(0);
+  }
+
+  .icon {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 920px) {
+  /* Add Remove Buttons */
+  #add-remove {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-lg {
+    display: block;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #f4f4f4;
+    transition: 0.5s;
+    margin: 2rem;
+  }
+
+  .btn-lg:hover {
+    color: #f96816;
+    border: 1px solid #f96816;
+  }
+}
+
+@media (max-width: 680px) {
+  .btn-lg:hover {
+    color: #f96816;
+    border: 1px solid #f96816;
+  }
+
+  /* Games Grid */
+  #games-grid-container {
+    display: block;
+  }
+
+  .games-grid-col {
+    margin-bottom: 2rem;
+  }
+
+  .game-cover {
+    height: 350px;
+    width: 284px;
+    border-radius: 2px;
+    filter: grayscale(35%);
+    transition: 0.5s;
+  }
+
+  .game-cover:hover {
+    filter: grayscale(0);
+  }
+
+  .icon {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Add Remove Buttons */
+  #add-remove {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-lg {
+    display: block;
+    font-size: 1.8rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #f4f4f4;
+    transition: 0.5s;
+    margin: 1rem;
+  }
+
+  .btn-lg:hover {
+    color: #f96816;
+    border: 1px solid #f96816;
+  }
+}

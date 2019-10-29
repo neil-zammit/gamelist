@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/0833571da7.js"></script>
+    <link rel="stylesheet" href="css/user.css" />
+    <title>User</title>
+  </head>
+  <body>
+    <div id="nav-bar">
+      <h1 class="logo">GameList</h1>
+    </div>
+    <div class="header">
+      <h1>Welcome to your wishlist</h1>
+      <p>Feel free to browse, add or remove games from your list.</p>
+    </div>
+    <div id="add-remove">
+      <div class="add">
+        <a class="btn btn-lg" href="/add">Add Games</a>
+      </div>
+      <div class="remove">
+        <a class="btn btn-lg" href="/remove">Remove Games</a>
+      </div>
+      <div class="logout">
+        <a class="btn btn-lg" href="/signout">Sign Out</a>
+      </div>
+    </div>
+    <!-- Games Grid  -->
+    <div id="games-grid-container">
+      <!-- Loop through db content and display column data for each grid col -->
+      {{#each games}}
+      <div class="games-grid-col">
+        <p>{{title}}</p>
+        <img
+          class="game-cover"
+          src={{image}}
+          alt={{title}}
+        />
+        <br />
+        <i class="{{iconOne}}"></i>
+        <i class="{{iconTwo}}"></i>
+        <i class="{{iconThree}}"></i>
+      </div>
+      {{/each}}
+    </div>
+  </body>
+</html>
